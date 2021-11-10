@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/saint_James/fontAwesome/fontAwesome.css">
+    <link rel="stylesheet" href="/saint_james/includes/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saint_james/includes/css/stylesheet.css">
+    <title>Saint James</title>
+</head>
+<body>
+    <div class="container py-4">
+                <h1 class="mt-2">Patient Registration</h1>
+                <h4 class="py-4">CREATE ACCOUNT</h4>
+        <!-- DISPLAYING ERROR IN FORM -->
+            <p id="message"></p>
+        <!-- END OF DISPLAYING ERROR IN FORM -->    
+            <form id="patientRegistration">
+            <div class="mb-2 row">  
+            <label class="col-sm-2 col-form-label">Image Upload</label>
+            <div class="col-sm-10">
+            <input class="form-control" type="file" name="patientImage" id="patientImage">
+            </div>
+        </div>
+        <div class="mb-2 row">
+            <label class="col-sm-2 col-form-label">Fullname</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="patientFname" id="patientFname">
+            </div>
+        </div>
+            <div class="mb-2 row">
+            <label class="col-sm-2 col-form-label">Username</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="patientUsername" id="patientUsername">
+            </div>
+        </div>
+            <div class="mb-2 row">
+            <label class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="patientEmail" id="patientEmail">
+            </div>
+        </div>
+        <div class="mb-2 row">
+                <label class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                <input type="password" name="patientPassword" class="form-control" id="patientRegPassword">
+                <span class="span" onclick="patientRegister()"> 
+                        <i class="fas fa-eye" id="eyeRegister"></i> 
+                        <i class="fas fa-eye-slash" id="hideRegister"></i>
+                </span>
+                </div>
+        </div>
+        <div class="mb-2 row">
+                <label class="col-sm-2 col-form-label">Confirm Password</label>
+                <div class="col-sm-10">
+                <input type="password" class="form-control" name="patientConPassword" id="patientRegConPassword" onkeyup="checkPass(); return false;">
+                <span class="span" onclick="patientRegister2()"> 
+                        <i class="fas fa-eye" id="eyeRegister2"></i> 
+                        <i class="fas fa-eye-slash" id="hideRegister2"></i>
+                </span>
+                </div>
+        </div>
+        <a href="/saint_James/patientSchedLogin.html" class="btn btn-secondary btn-lg" tabindex="-1" role="button">Have account</a>
+        <input type="button" class="btn btn-success btn-lg" value="Sign up" id="patientSubmit">
+    </div>
+    </form>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/saint_james/includes/js/bootstrap.min.js"></script>
+    <script src="/saint_james/includes/js/visible.js"></script>
+    <script src="/saint_james/includes/js/passvalidations.js"></script>
+
+<!-- SCRIPT FOR REGISTRATION  -->
+    <script>
+    $('#patientSubmit').click(function(){
+    let patientFname = $('#patientFname').val();   
+    let patientUsername = $('#patientUsername').val();   
+    let patientEmail = $('#patientEmail').val();   
+    let patientRegPassword = $('#patientRegPassword').val();   
+    let patientRegConPassword = $('#patientRegConPassword').val();  
+
+    var currentForm = $('#patientRegistration')[0];
+    var data = new FormData(currentForm);
+      if($('#patientImage').val()=='' || $('#patientFname').val()=='' 
+      || $('#patientUsername').val()=='' || $('#patientEmail').val()=='' 
+      || $('#patientRegPassword').val()=='' || $('#patientRegConPassword').val()==''){
+             Swal.fire(
+            'Register Failed',
+            'Please, Input all missing fields',
+            'warning'
+            )
+        }else if((patientFname).length < 5 || (patientFname).length > 30){
+          Swal.fire(
+            'Sorry, Insert Failed',
+            'Invalid Fullname',
+            'error'
+            )   
+          }else if((patientUsername).length < 5 || (patientUsername).length > 30){
+          Swal.fire(
+            'Sorry, Insert Failed',
+            'length of username must be between 5 and 30',
+            'error'
+            )   
+          }else if((patientRegPassword).length < 5 || (patientRegPassword).length > 30){
+          Swal.fire(
+            'Sorry, Insert Failed',
+            'length of password must be between 5 and 30',
+            'error'
+            )   
+          }else if((patientRegPassword) !== (patientRegConPassword)){
+           Swal.fire(
+            'Sorry, Insert Failed',
+            'Password Mismatch',
+            'error'
+            )   
+          }   
+            else{
+              console.log(data)
+                   $.ajax({
+                        url: "/saint_james/includes/php/newPatients.php",
+                        method: "POST",
+                        dataType: "text",
+                        data:data,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        success:function(response){
+                            if(response == 'Sorry, The Account is already Exist'){
+                                     Swal.fire(
+                                    'Register Failed',
+                                    'Sorry, The Account is already Exist',
+                                    'error'
+                                    )
+                            }else if(response == 'Sorry, The File is not an image.'){
+                                    Swal.fire(
+                                    'Register Failed',
+                                    'Sorry, The File is not an image.',
+                                    'error'
+                                    )
+                            }else if(response == 'Sorry, The File is too large.'){
+                                Swal.fire(
+                                    'Register Failed',
+                                    'Sorry, The File is too large.',
+                                    'error'
+                                    )
+                            }
+                            else if(response == 'Sorry, only JPG, JPEG, PNG & GIF files are allowed.'){
+                                Swal.fire(
+                                    'Register Failed',
+                                    'Sorry, only JPG, JPEG, PNG & GIF files are allowed.',
+                                    'error'
+                                    )
+                            }
+                            else if(response == 'Sorry, your file was not uploaded.'){
+                                Swal.fire(
+                                    'Register Failed',
+                                    'Sorry, your file was not uploaded.',
+                                    'error'
+                                    )
+                            }
+                            else if(response == 'Sorry, Invalid Email Try Another one'){
+                                Swal.fire(
+                                    'Register Failed',
+                                    'Sorry, Invalid Email Try Another one',
+                                    'error'
+                                    )
+                            }
+                            else if(response == 'Sorry, Register Failed'){
+                                Swal.fire(
+                                    'Register Failed',
+                                    'Sorry, Register Failed',
+                                    'error'
+                                    )
+                            }
+                            else if(response == 'Register Successfully'){
+                                $("#patientRegistration").trigger("reset");
+                                Swal.fire(
+                                    'Registration Successfully',
+                                    'New Patient Registered',
+                                    'success'
+                                    )
+                            $('#patientRegistration').trigger("reset");
+                            }
+                        },
+                        error:function(error){
+                            console.log(error)
+                        }
+                    }) 
+            }
+})
+    </script>
+<!-- END OF SCRIPT FOR REGISTRATION  -->
+</body>
+</html>

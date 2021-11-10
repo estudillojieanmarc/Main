@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/saint_James/includes/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saint_James/includes/css/stylesheet.css">
+    <link rel="stylesheet" href="/saint_James/fontAwesome/fontAwesome.css">
+    <title>Saint James</title>
+</head>
+<body>
+<!-- PHARMACY LOGIN -->
+        <a href="/saint_James/saintJames.html" class="btn btn-primary btn-lg">HOME</a>
+        <div class="container py-4">
+            <form method="POST" action="/saint_James/php/patientLoginForm.php" id="loginPatientForm">
+            <div id="message"></div>
+             <H1 class="py-4">Scheduling Login</H1>
+            <div class="mb-2 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Username:</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="patientScheUsername" id="patientScheUsername">
+            </div>
+        </div>
+        <div class="mb-2 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
+            <div class="col-sm-10">
+            <input type="password" class="form-control" name="patientSchedPassword" id="patientSchedPassword">
+            <span class="span" onclick="scheduleLogin()"> 
+                        <i class="fas fa-eye" id="eyeSchedLogin"></i> 
+                        <i class="fas fa-eye-slash" id="hideSchedLogin"></i>
+                </span>
+            </div>
+        </div>
+        <a href="/saint_James/patientRegister.html" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Sign-up</a>
+        <input type="button" class="btn btn-success btn-lg" value="Sign In" name="patientSchedLoginButton" id="patientSchedLoginButton">
+        </form>
+    </div>
+<!-- END OF PHARMACY LOGIN -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/saint_James/includes/js/bootstrap.min.js"></script>
+    <script src="/saint_James/includes/js/visible.js"></script>
+
+
+
+<!-- LOGIN SCRIPT JS -->
+    <script>
+    $(document).ready(function(){
+    $("#patientSchedLoginButton").on('click',function(){
+        var Username = $("#patientScheUsername").val().trim();
+        var Password = $("#patientSchedPassword").val().trim();
+        if(Username == "" || Password == "" ){
+            Swal.fire({
+            icon: 'warning',
+            title: 'Login Failed',
+            text: 'Please, Input All Missing Fields',
+            })                 
+        }else{
+            $.ajax({
+                url:"/saint_James/includes/php/patientSchedLog.php",
+                method:"POST",
+                data:{
+                     patientLogin:1, 
+                     usernamePatient:Username,
+                     passwordPatient:Password
+                    },
+                success:function(response){
+                console.log(response)   
+                if(response == 1){
+                    window.location = "/saint_James/patientApp/scheduleHome.html";
+             
+                }else if(response == 0){
+                    Swal.fire({
+                    icon: 'error',
+                    title: 'Login Failed',
+                    text: 'Sorry, Your Email/Password is Incorrect',
+                    })                        
+                }   
+              }
+          });
+        }
+     });
+});
+</script>
+<!-- END LOGIN SCRIPT JS -->
+
+
+</body>
+</html>

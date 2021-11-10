@@ -1,0 +1,19 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* NAVBAR */
+
+/* EYEBALL STYLE  */
+#hideSchedLogin, #hideLogin ,#hideRegister ,#hideRegister2{
+    cursor: pointer;
+}
+#eyeSchedLogin, #eyeLogin , #eyeRegister, #eyeRegister2{
+    cursor: pointer;
+    display: none;
+}
+/* END OF EYEBALL STYLE */
