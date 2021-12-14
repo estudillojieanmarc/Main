@@ -1,19 +1,39 @@
 /* GOOGLE FONT */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap");
+
+:root {
+  --primaryBtn: #294652;
+  --scndBg: #565656;
+  --scndColor: #868686;
+  --dashBg: #e5e5e5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 /* NAVBAR */
 
 /* EYEBALL STYLE  */
-#hideSchedLogin, #hideLogin ,#hideRegister ,#hideRegister2{
-    cursor: pointer;
+#hideSchedLogin,
+#hideLogin,
+#hideRegister,
+#hideRegister2 {
+  cursor: pointer;
 }
-#eyeSchedLogin, #eyeLogin , #eyeRegister, #eyeRegister2{
-    cursor: pointer;
-    display: none;
+#eyeSchedLogin,
+#eyeLogin,
+#eyeRegister,
+#eyeRegister2 {
+  cursor: pointer;
+  display: none;
 }
 /* END OF EYEBALL STYLE */
+
+/* Navbar */
+
+.buttons {
+  background-color: var(--primaryBtn);
+}
