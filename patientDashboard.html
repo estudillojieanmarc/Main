@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/saint_James/includes/css/stylesheet.css">
-    <link rel="stylesheet" href="/saint_James/includes/css/style.css">
     <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
     <link rel="icon" href="includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
+    <link rel="stylesheet" href="/saint_James/includes/css/style.css">
     <title>Dashboard</title>
 </head>
 <body id="secondaryBg" onload="initClock()">
@@ -71,23 +71,42 @@
         </div>
         <div class="row">
             <!-- cards -->
-            <div class="col bg-light p-5">
+            <div class="col-7 bg-light rounded p-4 mx-1">
                 <h5 class="text-secondary mb-4">Services</h5>
-                <div class="row">
-                    <div class="card text-center p-3" style="width: 20rem;">
-                        <img src="includes/img/online-pharmacy-dash.png" class="card-img-top" alt="">
+                <div class="row d-flex flex-row justify-content-evenly flex-wrap">
+                    <div class="card text-center p-3 shadow bg-body mb-3 border-0 rounded" style="width: 18rem;">
+                        <img src="includes/img/online-pharmacy-dash.png" class="card-img-top py-1 px-5" alt="">
                         <div class="card-body">
-                          <h5 class="card-title">Online Pharmacy</h5>
-                          <p class="card-text text-secondary fs-6">Online medicine shop where you can buy medicine.</p>
-                          <a href="#" class="btn shadow-none medicine-btn" role="button">Buy Medicine</a>
+                          <h5 class="card-title mb-3">Online Pharmacy</h5>
+                          <p class="card-text text-secondary fs-6 mb-5">Online medicine shop where you can buy medicine.</p>
+                          <div class="d-grid gap-2">
+                            <a href="#" class=" btn border-0 medicine-btn text-light y-4">Buy medicine</a>
+                          </div>
                         </div>
-                      </div>
+                    </div>
+                    <div class="card text-center p-3 shadow bg-body mb-3 border-0 rounded " style="width: 18rem;">
+                        <img src="includes/img/appointment-dash.png" class="card-img-top py-1 px-5" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title mb-3">Doctor Appointment</h5>
+                          <p class="card-text text-secondary fs-6 mb-5">Request an appointment with the available Doctors that fits our needs.</p>
+                          <div class="d-grid grap-2">
+                            <a href="#" class="btn border-0 appointment-btn text-light y-4">Make appointment</a>
+                          </div>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
             <!-- Announcements -->
-            <div class="col">
-
+            <div class="col rounded p-4 mx-1 bg-light">
+                <h5 class="text-secondary mb-4">Announcements</h5>
+                <div class="container shadow bg-body p-3 rounded">
+                    <h6 class="txt-primary mb-3">A new medicine is releasesd</h6>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-secondary txt-small">Administrator</p>
+                        <p class="text-secondary txt-small">10:36:21 AM 12/12/2021</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
