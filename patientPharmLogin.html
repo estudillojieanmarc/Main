@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="/saint_James/includes/css/stylesheet.css">
     <link rel="stylesheet" href="/saint_James/includes/css/style.css">
     <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
-    <title>Patient - Saint James</title>
+    <link rel="icon" href="includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
+    <title>Sign in - Saint James</title>
 </head>
-<body>
+<body class="overflow-hidden">
 <!-- PHARMACY LOGIN -->
             <!-- <a href="/saint_James/saintJames.html" class="btn btn-primary btn-lg">HOME</a>
             <div class="container py-4">
@@ -42,7 +43,7 @@
 <div class="container-fluid">
     <div class="row">
         <!-- login -->
-        <div class="container col-md-5 mt-3 pt-5">
+        <div class="container col-md-5 mt-3 gx-5">
             <a href="/saint_James/saintJames.html" class="btn mb-3">
                 <img src="includes/img/logo.png" alt="logo" width="auto" height="50" class="d-inline-block align-text-top me-3">
             </a>
@@ -54,28 +55,30 @@
                     <p class="py-2 txt-secondary">Please sign in first to enter and access our features </p>
                     <div class="mb-2 row">
                         <div class="mb-3">
+                            
                             <label for="adminUsername" class="form-label">Username</label>
                             <input type="text" class="form-control" name="patientUsername" id="patientUsername">
                         </div>
                     </div>
                     <div class="mb-3">
                             <label for="adminPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="patientPassword" id="patientPassword">
-                            <span class="span" onclick="pharmacyLogin()"> 
+                            <input type="password" class="form-control mb-5" name="patientPassword" id="patientPassword">
+                            <!-- <span class="span" onclick="pharmacyLogin()"> 
                                 <i class="fas fa-eye" id="eyeLogin"></i> 
                                 <i class="fas fa-eye-slash" id="hideLogin"></i>
-                            </span>
+                                <label for="">Show Password</label>
+                            </span> -->
                     </div>
                     <div class="d-grid gap-2 mx-auto">
-                        <input class="btn buttons text-light" type="button" role="button" value="Sign In" name="patientLoginButton" id="patientLoginButton">
-                        <a href="/saint_James/patientRegister.html" class="btn text-center" tabindex="-1" role="button" aria-disabled="true">Sign-up</a>
+                        <input class="btn buttons text-light mb-3" type="button" role="button" value="Sign In" name="patientLoginButton" id="patientLoginButton">
+                        <P class="text-center txt-secondary">I don’t have account? <a href="/saint_James/patientRegister.html" class="txt-primary fw-bold" role="button" aria-disabled="true">Sign up</a> </P>
                     </div>
                 </form>
             </div>
         </div>
         <!-- img -->
-        <div class="container-fluid col m-0 img-content">
-            <img src="includes/img/admin-img.png" alt="">
+        <div class="col m-0 sign-in-img p-0">
+            <img src="includes/img/sign-in-img.png" alt="">
         </div>
     </div>
 </div> 

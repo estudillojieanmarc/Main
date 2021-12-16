@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/saint_James/fontAwesome/fontAwesome.css">
-    <link rel="stylesheet" href="/saint_james/includes/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/saint_james/includes/css/stylesheet.css">
+    <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saint_James/includes/css/stylesheet.css">
+    <link rel="stylesheet" href="/saint_James/includes/css/style.css">
+    <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
+    <link rel="icon" href="includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
     <title>Saint James</title>
 </head>
 <body>
-    <div class="container py-4">
+    <!-- <div class="container py-4">
                 <h1 class="mt-2">Patient Registration</h1>
                 <h4 class="py-4">CREATE ACCOUNT</h4>
-        <!-- DISPLAYING ERROR IN FORM -->
+  
             <p id="message"></p>
-        <!-- END OF DISPLAYING ERROR IN FORM -->    
+   
             <form id="patientRegistration">
-            <div class="mb-2 row">  
-            <label class="col-sm-2 col-form-label">Image Upload</label>
-            <div class="col-sm-10">
-            <input class="form-control" type="file" name="patientImage" id="patientImage">
+                <div class="mb-2 row">  
+                    <label class="col-sm-2 col-form-label">Image Upload</label>
+                    <div class="col-sm-10">
+                    <input class="form-control" type="file" name="patientImage" id="patientImage">
+                    </div>
             </div>
-        </div>
         <div class="mb-2 row">
             <label class="col-sm-2 col-form-label">Fullname</label>
             <div class="col-sm-10">
@@ -64,7 +67,68 @@
         <a href="/saint_James/patientSchedLogin.html" class="btn btn-secondary btn-lg" tabindex="-1" role="button">Have account</a>
         <input type="button" class="btn btn-success btn-lg" value="Sign up" id="patientSubmit">
     </div>
-    </form>
+    </form> -->
+    <!-- start -->
+    <div class="container-fluid">
+        <div class="row">        
+            <div class="container col">       
+                <!-- form -->
+                <div class="container p-5">
+                    <a href="/saint_James/saintJames.html" class="btn mb-3">
+                        <img src="includes/img/logo.png" alt="logo" width="auto" height="50" class="d-inline-block align-text-top me-3">
+                    </a>   
+                    <h2 class="py-2 txt-primary fw-bold">Sign up to St . James Hospital </h2>
+                    <p class="py-2 txt-secondary">One account for fast, efficient, and hassle-free
+                        medical assist for you. Fill up the form below.</p>
+                    <!-- DISPLAYING ERROR IN FORM -->
+                    <p id="message"></p>
+                    <!-- END OF DISPLAYING ERROR IN FORM -->  
+                    <form id="patientRegistration">
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Profile Picture</label>
+                            <input class="form-control" type="file" name="patientImage" id="patientImage">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Full Name</label>
+                            <input class="form-control" type="text" name="patientFname" id="patientFname" placeholder="John M. Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Username</label>
+                            <input class="form-control" type="text" name="patientUsername" id="patientUsername" placeholder="John006">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Email Address</label>
+                            <input class="form-control" type="text" name="patientEmail" id="patientEmail" placeholder="John@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Password</label>
+                            <input class="form-control" type="password" name="patientPassword" id="patientRegPassword" placeholder="********">
+                            <!-- <span class="span" onclick="patientRegister2()"> 
+                                <i class="fas fa-eye" id="eyeRegister2"></i> 
+                                <i class="fas fa-eye-slash" id="hideRegister2"></i>
+                            </span> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Confirm Password</label>
+                            <input class="form-control mb-5" type="password" name="patientConPassword" id="patientRegConPassword" onkeyup="checkPass(); return false;" placeholder="********">
+                            <!-- <span class="span" onclick="patientRegister2()"> 
+                                <i class="fas fa-eye" id="eyeRegister2"></i> 
+                                <i class="fas fa-eye-slash" id="hideRegister2"></i>
+                            </span> -->
+                        </div>
+                        <div class="d-grid gap-2 mx-auto">
+                            <input type="button" class="btn buttons text-light fw-bold py-2" value="Sign up" id="patientSubmit">
+                            <P class="text-center txt-secondary">Already have an account? <a href="/saint_James/patientSchedLogin.html" class="txt-primary fw-bold" role="button" aria-disabled="true">Sign in</a> </P>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- image -->
+            <div class="container-fluid col m-0 sign-up-img p-0">
+                <img src="includes/img/sign-up-img3.png" alt="">
+            </div>
+        </div>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/saint_james/includes/js/bootstrap.min.js"></script>

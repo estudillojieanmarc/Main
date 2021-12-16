@@ -54,7 +54,8 @@
   text-decoration: none;
 }
 
-.img-content img {
+.img-content img,
+.sign-in-img img {
   height: 100vh;
   width: 100%;
 }
