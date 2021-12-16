@@ -1,0 +1,60 @@
+:root {
+  --primaryBtn: #294652;
+  --scndBg: #565656;
+  --scndColor: #868686;
+  --dashBg: #e5e5e5;
+  --dashBG2: #e9e9e9;
+  --titleName: #ffb37b;
+}
+
+/* Navbar */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons {
+  background-color: var(--primaryBtn);
+}
+
+.txt-primary {
+  color: var(--primaryBtn);
+}
+
+.txt-secondary {
+  color: var(--scndColor);
+}
+
+/* Landing Page */
+
+#secondaryBg,
+#services {
+  background: var(--dashBG2);
+}
+
+#about {
+  background: linear-gradient(180deg, #294652 0%, rgba(41, 70, 82, 0.81) 100%);
+}
+
+#about h2 {
+  color: var(--titleName);
+}
+
+#about p {
+  color: var(--dashBg);
+}
+
+#footer {
+  background: #565656;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
+.img-content img {
+  height: 100vh;
+  width: 100%;
+}

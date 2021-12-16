@@ -7,6 +7,7 @@
   --scndColor: #868686;
   --dashBg: #e5e5e5;
   --dashBG2: #e9e9e9;
+  --titleName: #ffb37b;
 }
 
 * {
@@ -14,6 +15,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 /* NAVBAR */
 
@@ -34,18 +36,3 @@
 /* END OF EYEBALL STYLE */
 
 /* Navbar */
-
-.buttons {
-  background-color: var(--primaryBtn);
-}
-
-.txt-primary {
-  color: var(--primaryBtn);
-}
-
-/* Landing Page */
-
-#secondaryBg,
-#services {
-  background: var(--dashBG2);
-}

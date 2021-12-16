@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/main/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/main/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/main/includes/css/stylesheet.css">
+    <link rel="stylesheet" href="/main/includes/css/style.css">
     <link rel="stylesheet" href="/main/fontawesome/fontAwesome.css">
     <title>Saint James Hospital</title>
 </head>
@@ -22,28 +23,28 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#services">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Pharmacy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#contact">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
             </ul>
             <div class="d-flex">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link mx-3 btn" aria-current="page" href="#"><strong>Sign in</strong></a>
+                      <a class="nav-link mx-3 btn" aria-current="page" href="patientPharmLogin.html"><strong>Sign in</strong></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link buttons btn text-light px-4 mx-3" href="#">Sign up</a>
+                      <a class="nav-link buttons btn text-light px-4 mx-3" href="patientRegister.html">Sign up</a>
                     </li>
                 </ul>
             </div>
@@ -64,7 +65,7 @@
           </div>
       </div> -->
       <!-- Home -->
-      <div class="container mt-3">
+      <div class="container mt-3" id="home">
         <div class="row">
           <div class="col mt-5 pt-5">
             <h1 class="mb-4 txt-primary fw-bold">We are providing high quality and affordable health care</h1>
@@ -83,7 +84,7 @@
           <div class="card border-0 m-3 px-5" style="width: 20rem;"id="secondaryBg">
             <img src="includes/img/first-aid-kit.png" class="card-img-top img-fluid px-5 py-5" alt="first-aid-icon">
             <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Fast Health Service</h5>
+              <h5 class="card-title mb-4">Fast Health Service</h5>
               <p class="card-text text-secondary">
                 A vast and safe way to provide health service for our patients without any delay
               </p>
@@ -92,7 +93,7 @@
           <div class="card border-0 m-3 px-5" style="width: 20rem;"id="secondaryBg">
             <img src="includes/img/online-pharmacy.png" class="card-img-top img-fluid px-5 py-5" alt="online-pharmacy-icon">
             <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Online Pharmacy</h5>
+              <h5 class="card-title mb-4">Online Pharmacy</h5>
               <p class="card-text text-secondary">
                 Secured and efficient medicine shop with high quality grade.
               </p>
@@ -101,7 +102,7 @@
           <div class="card border-0 m-3 px-5" style="width: 20rem;"id="secondaryBg">
             <img src="includes/img/appointment.png" class="card-img-top img-fluid px-5 py-5" alt="appointment-icon">
             <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Request an Appointment</h5>
+              <h5 class="card-title mb-4">Request an Appointment</h5>
               <p class="card-text text-secondary">
                 Responsive patient appointment with any doctors that fits the needs.
               </p>
@@ -110,37 +111,62 @@
         </div>
       </div>
       <!-- Contact us -->
-      <div class="container-fluid m-1 p-1">
-        <h2 class="txt-primary fw-bold text-center pt-5">Contact Us At</h2>
-        <div class="container d-flex  flex-wrap flex-row justify-content-between align-items-center my-5 shadow p-1 my-5 bg-body rounded">
-          <!-- Call -->
-          <div class="container d-flex">
-            <img src="includes/img/call-icon.png" alt="call" class="navbar-brand" height="30" width="auto">
-            <label for="" class="fs-6">129-1342-121</label>
-          </div>
-          <!-- gmail -->
-          <div class="container d-flex">
-            <img src="includes/img/gmail-icon.png" alt="gmail" class="navbar-brand" height="30" width="auto">
-            <label for="" class="fs-6">St.Jameshospital@gmail.com</label>
-          </div>
-          <!-- facebook -->
-          <div class="container d-flex">
-            <img src="includes/img/fb-icon.png" alt="gmail" class="navbar-brand" height="30" width="auto">
-            <label for="" class="fs-6">www.facebook.com/St.JamesHospital</label>
-          </div>
-          <div class="container">
-            <a href="#" class="btn buttons text-light" role="button">Request Appointment</a>
+        <div class="my-3" id="contact">
+          <h2 class="txt-primary fw-bold text-center py-4">Contact Us At</h2>
+          <div class="d-flex flex-row flex-wrap justify-content-evenly shadow align-items-center p-4 mx-5 my-5 bg-body rounded ">
+            <div class="p-2 d-flex">
+              <img src="includes/img/call-icon.png" alt="call" class="navbar-brand" height="30" width="auto">
+              <label for="" class="fs-6">129-1342-121</label>
+            </div>
+            <div class="p-2 d-flex">
+              <img src="includes/img/gmail-icon.png" alt="gmail" class="navbar-brand" height="30" width="auto">
+              <label for="" class="fs-6">St.Jameshospital@gmail.com</label>
+            </div>  
+            <div class="p-2 d-flex">
+              <img src="includes/img/fb-icon.png" alt="gmail" class="navbar-brand" height="30" width="auto">
+              <label for="" class="fs-6">www.facebook.com/St.JamesHospital</label>
+            </div>
+            <div class="p-2">
+              <a href="patientSchedLogin.html" class="btn buttons text-light" role="button">Request Appointment</a>
+            </div>
           </div>
         </div>
-
-        <div class="d-flex flex-row bd-highlight mb-3">
-          <div class="p-2">Flex item 1</div>
-          <div class="p-2">Flex item 2</div>
-          <div class="p-2">Flex item 3</div>
-        </div>
-
+        <!-- About -->
+      <div class="container-fluid p-5 buttons" id="about">
+        <h2 class="fw-bold text-center m-5 ">About St. James Hospital</h2>
+        <p class="text-light text-center">St. James Hospital aims to provide a high quaility of hospital services to the one
+          that needs our hospital. We keeping our reliable and credible medical assistance to our customers from the past to present time including the wide range of pharmacy credibility and medical health professionals that working to our hospital to give our sincere objective to help and ease the difficulty of peoples.
+        </p>
       </div>
-
+      <!-- footer -->
+      <div class="container-fluid text-center" id="footer">
+        <div class="row p-5">
+          <div class="col d-flex flex-column">
+            <h5 class="fw-bold txt-secondary my-3">St. James Hospital</h5>
+            <h6 class="fw-normal txt-secondary my-2">For more information kindly contact us at:</h6>
+            <div class="txt-secondary">
+              <i class="fas fa-phone my-2"> </i> 129-1342-121
+            </div>
+            <div class="txt-secondary">
+              <i class="fas fa-envelope mt-4 mb-5"> </i> St.Jameshospital@gmail.com
+            </div>
+          </div>
+          <div class="col d-flex flex-column">
+            <h5 class="fw-bold txt-secondary my-3">Useful Links</h5>
+            <a href="#home" class=" txt-secondary my-2">Home</a>
+            <a href="#services" class=" txt-secondary my-2">Services</a>
+            <a href="#" class=" txt-secondary my-2">Pharmacy</a>
+            <a href="#contact" class=" txt-secondary my-2">Contact Us</a>
+            <a href="#about" class=" txt-secondary my-2">About</a>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold txt-secondary my-3">Social Media</h5>
+            <a href="www.facebook.com" class=" txt-secondary">
+              <i class="fab fa-facebook-f txt-secondary "> </i> www.facebook.com/St.JamesHospital
+            </a>
+          </div>
+        </div>
+      </div>
 
     <script src="/main/bootstrap/js/bootstrap.js"></script>
     <script src="/main/bootstrap/js/bootstrap.min.js"></script>
