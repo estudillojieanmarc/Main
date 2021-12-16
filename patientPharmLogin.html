@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/saint_James/includes/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/saint_James/includes/css/stylesheet.css">
-    <link rel="stylesheet" href="/saint_James/fontAwesome/fontAwesome.css">
-    <title>Saint James</title>
+    <link rel="stylesheet" href="/saint_James/includes/css/style.css">
+    <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
+    <title>Patient - Saint James</title>
 </head>
 <body>
 <!-- PHARMACY LOGIN -->
-            <a href="/saint_James/saintJames.html" class="btn btn-primary btn-lg">HOME</a>
+            <!-- <a href="/saint_James/saintJames.html" class="btn btn-primary btn-lg">HOME</a>
             <div class="container py-4">
             <form method="POST" id="loginPatientForm">
             <div id="message"></div>
@@ -29,13 +31,54 @@
             <span class="span" onclick="pharmacyLogin()"> 
                         <i class="fas fa-eye" id="eyeLogin"></i> 
                         <i class="fas fa-eye-slash" id="hideLogin"></i>
-                </span>
+            </span>
             </div>
         </div>
         <a href="/saint_James/patientRegister.html" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Sign-up</a>
         <input type="button" class="btn btn-success btn-lg" value="Sign In" name="patientLoginButton" id="patientLoginButton">
         </form>
+    </div> -->
+<!-- Start -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- login -->
+        <div class="container col-md-5 mt-3 pt-5">
+            <a href="/saint_James/saintJames.html" class="btn mb-3">
+                <img src="includes/img/logo.png" alt="logo" width="auto" height="50" class="d-inline-block align-text-top me-3">
+            </a>
+            <!-- forms -->
+            <div class="container p-3">
+                <form method="POST" id="loginPatientForm">
+                    <div id="message"></div>
+                    <h2 class="py-2 txt-primary fw-bold">Hi , Welcome to  St. James Hospital </h2>
+                    <p class="py-2 txt-secondary">Please sign in first to enter and access our features </p>
+                    <div class="mb-2 row">
+                        <div class="mb-3">
+                            <label for="adminUsername" class="form-label">Username</label>
+                            <input type="text" class="form-control" name="patientUsername" id="patientUsername">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                            <label for="adminPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" name="patientPassword" id="patientPassword">
+                            <span class="span" onclick="pharmacyLogin()"> 
+                                <i class="fas fa-eye" id="eyeLogin"></i> 
+                                <i class="fas fa-eye-slash" id="hideLogin"></i>
+                            </span>
+                    </div>
+                    <div class="d-grid gap-2 mx-auto">
+                        <input class="btn buttons text-light" type="button" role="button" value="Sign In" name="patientLoginButton" id="patientLoginButton">
+                        <a href="/saint_James/patientRegister.html" class="btn text-center" tabindex="-1" role="button" aria-disabled="true">Sign-up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- img -->
+        <div class="container-fluid col m-0 img-content">
+            <img src="includes/img/admin-img.png" alt="">
+        </div>
     </div>
+</div> 
 <!-- END OF PHARMACY LOGIN -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
