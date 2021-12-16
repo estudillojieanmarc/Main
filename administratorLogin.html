@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/saint_James/includes/css/style.css">
     <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
     <link rel="icon" href="includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
-    <title>Sign in - Saint James</title>
+    <title>Admin</title>
 </head>
 <body>
 <!-- PHARMACY LOGIN -->
@@ -48,12 +48,12 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- login -->
-                <div class="container col-md-5 mt-2 pt-5">
-                    <a href="/saint_James/saintJames.html" class="btn mb-3">
+                <div class="container col-6 mt-3 px-5 py-3">
+                    <a href="/saint_James/saintJames.html" class="btn mb-3 px-5">
                         <img src="includes/img/logo.png" alt="logo" width="auto" height="50" class="d-inline-block align-text-top me-3">
                     </a>
                     <!-- forms -->
-                    <div class="container p-3">
+                    <div class="container px-5 py-2">
                         <form method="POST" id="loginPatientForm">
                             <div id="message"></div>
                             <h2 class="py-2 txt-primary fw-bold">Hi , Welcome to  St. James Hospital </h2>
@@ -64,11 +64,17 @@
                                     <input type="text" class="form-control" name="adminUsername" id="adminUsername">
                                 </div>
                             </div>
-                            <div class="mb-5">
+                            <div class="mb-3">
                                     <label for="adminPassword" class="form-label">Password</label>
-                                    <input type="password" class="form-control" name="adminPassword" id="adminPassword">
+                                    <input type="password" class="form-control " name="adminPassword" id="adminPassword">
                             </div>
-                   
+                            <!-- show password -->
+                            <div class="form-check mb-5">
+                                <input class="form-check-input" type="checkbox" value="" id="passShow" onclick="showPassword()">
+                                <label class="form-check-label" for="passShow">
+                                  Show Password
+                                </label>
+                            </div>
                             <div class="d-grid gap-2 mx-auto">
                                 <input class="btn buttons text-light" type="button" role="button" value="Sign In" name="administratorLogin" id="administratorLogin">
                             </div>

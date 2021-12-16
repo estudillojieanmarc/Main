@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/saint_James/includes/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/saint_James/includes/css/stylesheet.css">
-    <link rel="stylesheet" href="/saint_James/fontAwesome/fontAwesome.css">
+    <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
     <link rel="icon" href="includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
-    <title>Saint James</title>
+    <link rel="stylesheet" href="/saint_James/includes/css/style.css">
+    <title>Sign in - Schedulling</title>
 </head>
 <body>
 <!-- PHARMACY LOGIN -->
-        <a href="/saint_James/saintJames.html" class="btn btn-primary btn-lg">HOME</a>
+        <!-- <a href="/saint_James/saintJames.html" class="btn btn-primary btn-lg">HOME</a>
         <div class="container py-4">
             <form method="POST" action="/saint_James/php/patientLoginForm.php" id="loginPatientForm">
             <div id="message"></div>
@@ -36,8 +38,58 @@
         <a href="/saint_James/patientRegister.html" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Sign-up</a>
         <input type="button" class="btn btn-success btn-lg" value="Sign In" name="patientSchedLoginButton" id="patientSchedLoginButton">
         </form>
-    </div>
+    </div> -->
 <!-- END OF PHARMACY LOGIN -->
+
+<!-- start -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- login -->
+            <div class="container col-6 mt-3 px-5 py-3">
+                <a href="/saint_James/saintJames.html" class="btn mb-3 px-5">
+                    <img src="includes/img/logo.png" alt="logo" width="auto" height="50" class="d-inline-block align-text-top me-3">
+                </a>
+                <!-- forms -->
+                <div class="container px-5 py-2">
+                    <form method="POST" action="/saint_James/php/patientLoginForm.php" id="loginPatientForm">
+                        <div id="message"></div>
+                        <h2 class="py-2 txt-primary fw-bold">Hi , Welcome to  St. James Hospital </h2>
+                        <p class="py-2 txt-secondary">Please sign in first to enter and access our pharmacy</p>
+                        <div class="mb-2 row">
+                            <div class="mb-3">
+                                <label for="adminUsername" class="form-label">Username</label>
+                                <input type="text" class="form-control" name="patientScheUsername" id="patientScheUsername">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                                <label for="adminPassword" class="form-label">Password</label>
+                                <input type="password" class="form-control mb-4" name="patientSchedPassword" id="patientSchedPassword">
+                                <!-- <span class="span" onclick="pharmacyLogin()"> 
+                                    <i class="fas fa-eye" id="eyeLogin"></i> 
+                                    <i class="fas fa-eye-slash" id="hideLogin"></i>
+                                    <label for="">Show Password</label>
+                                </span> -->
+                        </div>
+                         <!-- show password -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="passShow" onclick="showPassSched()">
+                            <label class="form-check-label" for="passShow">
+                            Show Password
+                            </label>
+                        </div>
+                        <div class="d-grid gap-2 mx-auto">
+                            <input class="btn buttons text-light mb-3" type="button" role="button" value="Sign In" name="patientLoginButton" id="patientLoginButton">
+                            <P class="text-center txt-secondary">I don’t have account? <a href="/saint_James/patientRegister.html" class="txt-primary fw-bold" role="button" aria-disabled="true">Sign up</a> </P>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- img -->
+            <div class="col m-0 sign-in-img p-0">
+                <img src="includes/img/scheduling-img.png" alt="">
+            </div>
+        </div>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
