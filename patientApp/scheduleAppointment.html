@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/saint_James/includes/css/style.css">
         <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
         <link rel="icon" href="../includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
-        <title>Home - Schedulling</title>
+        <title>Request Appointment</title>
     </head>
     <body>
          <!-- nav -->
@@ -48,74 +48,72 @@
     <div class="container">
         <!-- Header -->
         <div class="row d-flex flex-row align-items-center my-5">
-            <div class="col-8 d-flex flex-row align-items-center">
-                <h3 class="txt-primary me-4">All Doctors</h3>
-                <!-- Filters -->
-                <div>
-                    <select class="form-select form-select-sm shadow-none border-0 text-secondary" aria-label=".form-select-sm example">
-                        <option selected class="">Sort</option>
-                        <option value="1">A-Z</option>
-                        <option value="2">Z-A</option>
-                      </select>
-                </div>
-                <div>
-                    <select class="form-select form-select-sm shadow-none border-0 text-secondary" aria-label=".form-select-sm example">
-                        <option selected>Filter</option>
-                        <option value="1">Surgeon</option>
-                        <option value="2">Philantrophist</option>
-                        <option value="3">Dernatologist</option>
-                      </select>
-                </div>
-            </div>
-            <!-- search bar -->
-            <div class="col">
-                <div class="container form-control">
-                    <form class="d-flex">
-                        <input class="form-control border-0 shadow-none" type="search" placeholder="Search here..." aria-label="Search">
-                        <button class="btn border-0 shadow-none" type="submit">
-                            <i class="fas fa-search text-secondary"></i>
-                        </button>
-                      </form>
-                </div>
+            <div class="col-8">
+                <h3 class="txt-primary me-4">Request an appointment</h3>
+                <a href="scheduleHome.html" class="text-secondary txt-small">Go back to all doctors</a>
             </div>
         </div>
-        <!-- doctor cards -->
+        <!-- form -->
         <div class="row">
-            <div class="d-flex flex-wrap justify-content-evenly">
-                <!-- card -->
-                <div class="card text-center p-3 shadow bg-body mb-3 rounded" style="width: 15rem;">
-                    <img src="../includes/img/online-pharmacy-dash.png" class="card-img-top py-1 px-5" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Larry M. Miranda</h5>
-                      <p class="card-text text-secondary txt-small my-2">Heart Surgeon</p>
-                      <p class="card-text text-secondary txt-small mb-4">larsmirador@gmail.com</p>
-                      <div class="d-grid gap-2">
-                        <a href="#" class=" btn shadow-none buttons text-light txt-small">Request Appointment</a>
-                      </div>
+            <div class="d-flex justify-content-center">
+                <!-- forms -->
+                 <!-- DISPLAYING ERROR IN FORM -->
+                 <p id="message"></p>
+                 <!-- END OF DISPLAYING ERROR IN FORM -->  
+                 <form id="patientRegistration">
+                     <div class="row">
+                         <div class="col mb-4">
+                             <label for="formFile" class="form-label">First Name</label>
+                             <input class="form-control" type="text" name="" id="">
+                         </div>
+                         <div class="col mb-4">
+                             <label for="formFile" class="form-label">Last Name</label>
+                             <input class="form-control" type="text" name="patientUsername" id="patientUsername">
+                         </div>
+                     </div>
+                     <div class="mb-4">
+                        <label for="formFile" class="form-label">Address (House Number, Street, Municipality/City)</label>
+                        <input class="form-control" type="text" name="" id="">
                     </div>
-                </div>
-                <div class="card text-center p-3 shadow bg-body mb-3 rounded" style="width: 15rem;">
-                    <img src="../includes/img/online-pharmacy-dash.png" class="card-img-top py-1 px-5" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Larry M. Miranda</h5>
-                      <p class="card-text text-secondary txt-small my-2">Heart Surgeon</p>
-                      <p class="card-text text-secondary txt-small mb-4">larsmirador@gmail.com</p>
-                      <div class="d-grid gap-2">
-                        <a href="#" class=" btn shadow-none buttons text-light txt-small">Request Appointment</a>
-                      </div>
+                     <div class="mb-4">
+                        <label for="formFile" class="form-label">Email Address</label>
+                        <input class="form-control" type="text" name="" id="">
                     </div>
-                </div>
-                <div class="card text-center p-3 shadow bg-body mb-3 rounded" style="width: 15rem;">
-                    <img src="../includes/img/online-pharmacy-dash.png" class="card-img-top py-1 px-5" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Larry M. Miranda</h5>
-                      <p class="card-text text-secondary txt-small my-2">Heart Surgeon</p>
-                      <p class="card-text text-secondary txt-small mb-4">larsmirador@gmail.com</p>
-                      <div class="d-grid gap-2">
-                        <a href="#" class=" btn shadow-none buttons text-light txt-small">Request Appointment</a>
-                      </div>
+                     <div class="row">
+                         <div class="col mb-4">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select id="gender" class="form-select" aria-label="Default select example">
+                                <option selected>Gender</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                              </select>
+                         </div>
+                         <div class="col mb-4">
+                            <label for="icon" class="form-label">Birthdate</label>
+                            <input type="date" class="form-control" aria-label="bday">
+                         </div>                          
+                     </div>
+                     <div class="mb-4">
+                        <label for="" class="form-label">Brief Description of Visit</label>
+                        <textarea class="form-control"></textarea>
                     </div>
-                </div>
+                    <div class="mb-5">
+                        <label class="form-label">Set your Appointment Date Availability</label>
+                        <input type="datetime-local" class="form-control">
+                     </div> 
+                     <div class="row mb-3">
+                         <div class="col">
+                            <div class="d-grid gap-2">
+                                <input type="reset" class="btn btn-secondary text-light fw-bold py-2 mb-3" value="Cancel">
+                            </div>
+                         </div>
+                         <div class="col">
+                            <div class="d-grid gap-2">
+                                <input type="submit" class="btn buttons text-light fw-bold py-2 mb-3" value="Sign up" id="patientSubmit">
+                            </div>
+                         </div>
+                     </div>
+                 </form>
             </div>
         </div>
     </div>

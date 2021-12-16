@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="/saint_James/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/saint_James/includes/css/stylesheet.css">
     <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
-    <link rel="icon" href="includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
+    <link rel="icon" href="../includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
     <link rel="stylesheet" href="/saint_James/includes/css/style.css">
-    <title>Dashboard</title>
+    <title>Doctor - Dashboard</title>
 </head>
 <body id="secondaryBg" onload="initClock()">
     <!-- nav -->
     <nav class="navbar navbar-expand-lg buttons px-5 py-3 mb-5">
         <div class="container-fluid d-flex ">
           <a class="navbar-brand" href="#">
-            <img src="includes/img/dash-logo-white.png" alt="logo" width="auto" height="45" class="d-inline-block align-text-top me-3">
+            <img src="../includes/img/dash-logo-white.png" alt="logo" width="auto" height="45" class="d-inline-block align-text-top me-3">
           </a>
             <div class="d-flex">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <!-- Profile picture -->
                         <div class="dropdown">
-                            <a class="btn shadow-none dropdown-toggle text-secondary" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="btn shadow-none dropdown-toggle text-light" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end text-center p-3 border-0 shadow border" aria-labelledby="dropdownMenuLink">
@@ -70,44 +70,35 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <!-- cards -->
-            <div class="col-7 bg-light rounded p-4 mx-1">
-                <h5 class="text-secondary mb-4">Services</h5>
-                <div class="row d-flex flex-row justify-content-evenly flex-wrap">
-                    <div class="card text-center p-3 shadow bg-body mb-3 border-0 rounded" style="width: 18rem;">
-                        <img src="includes/img/online-pharmacy-dash.png" class="card-img-top py-1 px-5" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title mb-3">Online Pharmacy</h5>
-                          <p class="card-text text-secondary fs-6 mb-5">Online medicine shop where you can buy medicine.</p>
-                          <div class="d-grid gap-2">
-                            <a href="#" class=" btn border-0 medicine-btn text-light y-4">Buy medicine</a>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="card text-center p-3 shadow bg-body mb-3 border-0 rounded " style="width: 18rem;">
-                        <img src="includes/img/appointment-dash.png" class="card-img-top py-1 px-5" alt="">
-                        <div class="card-body">
-                          <h5 class="card-title mb-3">Doctor Appointment</h5>
-                          <p class="card-text text-secondary fs-6 mb-5">Request an appointment with the available Doctors that fits our needs.</p>
-                          <div class="d-grid grap-2">
-                            <a href="#" class="btn border-0 appointment-btn text-light y-4">Make appointment</a>
-                          </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <!-- Announcements -->
-            <div class="col rounded p-4 mx-1 bg-light">
-                <h5 class="text-secondary mb-4">Announcements</h5>
-                <div class="container shadow bg-body p-3 rounded">
-                    <h6 class="txt-primary mb-3">A new medicine is releasesd</h6>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <p class="text-secondary txt-small">Administrator</p>
-                        <p class="text-secondary txt-small">10:36:21 AM 12/12/2021</p>
-                    </div>
-                </div>
+         <!-- Queue Appointments -->
+         <div class="row bg-light p-4">
+            <h5 class="text-secondary mb-5">Appointments</h5>
+            <div class="table-responsive">
+                <table class="table align-middle text-center">
+                    <thead>
+                      <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-striped table-hover">
+                      <tr>
+                        <td>Larry</td>
+                        <td>Miranda</td>
+                        <td>Otto</td>
+                        <td>larsmirador@gmail.com</td>
+                        <td>09950911471</td>
+                        <td>
+                            <a href="#" class="btn btn-secondary">Cancel</a>
+                            <a href="#" class="btn btn-success">Accept</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
     </div>
@@ -148,6 +139,6 @@
     <script src="/saint_James/bootstrap/js/bootstrap.js"></script>
     <script src="/saint_James/bootstrap/js/bootstrap.min.js"></script>
     <script src="/saint_James/bootstrap/js/bootstrap.min.js"></script>
-    <script src="includes/js/date.js"></script>
+    <script src="../includes/js/date.js"></script>
 </body>
 </html>

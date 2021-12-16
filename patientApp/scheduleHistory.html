@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/saint_James/includes/css/style.css">
         <link rel="stylesheet" href="/saint_James/fontawesome/fontAwesome.css">
         <link rel="icon" href="../includes/img/logo.png" type="image/gif" sizes="HeightxWidth|any">
-        <title>Home - Schedulling</title>
+        <title>My Appointments</title>
     </head>
     <body>
          <!-- nav -->
@@ -39,7 +39,7 @@
                               <li><a href="#" class="btn btn-light shadow-none text-secondary txt-small" role="button">My Appointments</a></li>
                               <li><a href="#" class="text-secondary btn btn-light shadow-none txt-small" role="button">Sign out</a></li>
                             </ul>
-                          </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -48,75 +48,39 @@
     <div class="container">
         <!-- Header -->
         <div class="row d-flex flex-row align-items-center my-5">
-            <div class="col-8 d-flex flex-row align-items-center">
-                <h3 class="txt-primary me-4">All Doctors</h3>
-                <!-- Filters -->
-                <div>
-                    <select class="form-select form-select-sm shadow-none border-0 text-secondary" aria-label=".form-select-sm example">
-                        <option selected class="">Sort</option>
-                        <option value="1">A-Z</option>
-                        <option value="2">Z-A</option>
-                      </select>
-                </div>
-                <div>
-                    <select class="form-select form-select-sm shadow-none border-0 text-secondary" aria-label=".form-select-sm example">
-                        <option selected>Filter</option>
-                        <option value="1">Surgeon</option>
-                        <option value="2">Philantrophist</option>
-                        <option value="3">Dernatologist</option>
-                      </select>
-                </div>
-            </div>
-            <!-- search bar -->
-            <div class="col">
-                <div class="container form-control">
-                    <form class="d-flex">
-                        <input class="form-control border-0 shadow-none" type="search" placeholder="Search here..." aria-label="Search">
-                        <button class="btn border-0 shadow-none" type="submit">
-                            <i class="fas fa-search text-secondary"></i>
-                        </button>
-                      </form>
-                </div>
+            <div class="col-8">
+                <h3 class="txt-primary me-4">My Appointments</h3>
+                <a href="scheduleHome.html" class="text-secondary txt-small">Go back to all doctors</a>
             </div>
         </div>
-        <!-- doctor cards -->
+        <!-- My Appointment Table -->
         <div class="row">
-            <div class="d-flex flex-wrap justify-content-evenly">
-                <!-- card -->
-                <div class="card text-center p-3 shadow bg-body mb-3 rounded" style="width: 15rem;">
-                    <img src="../includes/img/online-pharmacy-dash.png" class="card-img-top py-1 px-5" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Larry M. Miranda</h5>
-                      <p class="card-text text-secondary txt-small my-2">Heart Surgeon</p>
-                      <p class="card-text text-secondary txt-small mb-4">larsmirador@gmail.com</p>
-                      <div class="d-grid gap-2">
-                        <a href="#" class=" btn shadow-none buttons text-light txt-small">Request Appointment</a>
-                      </div>
-                    </div>
-                </div>
-                <div class="card text-center p-3 shadow bg-body mb-3 rounded" style="width: 15rem;">
-                    <img src="../includes/img/online-pharmacy-dash.png" class="card-img-top py-1 px-5" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Larry M. Miranda</h5>
-                      <p class="card-text text-secondary txt-small my-2">Heart Surgeon</p>
-                      <p class="card-text text-secondary txt-small mb-4">larsmirador@gmail.com</p>
-                      <div class="d-grid gap-2">
-                        <a href="#" class=" btn shadow-none buttons text-light txt-small">Request Appointment</a>
-                      </div>
-                    </div>
-                </div>
-                <div class="card text-center p-3 shadow bg-body mb-3 rounded" style="width: 15rem;">
-                    <img src="../includes/img/online-pharmacy-dash.png" class="card-img-top py-1 px-5" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title mb-3">Larry M. Miranda</h5>
-                      <p class="card-text text-secondary txt-small my-2">Heart Surgeon</p>
-                      <p class="card-text text-secondary txt-small mb-4">larsmirador@gmail.com</p>
-                      <div class="d-grid gap-2">
-                        <a href="#" class=" btn shadow-none buttons text-light txt-small">Request Appointment</a>
-                      </div>
-                    </div>
-                </div>
-            </div>
+           <div class="table-responsive">
+            <table class="table align-middle text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Doctor's Name</th>
+                    <th scope="col">Specialization</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Date & Time</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="table-striped table-hover">
+                  <tr>
+                    <td>Larry Miranda</td>
+                    <td>Surgeon</td>
+                    <td>Otto</td>
+                    <td>larsmirador@gmail.com</td>
+                    <td>Date and Time</td>
+                    <td>
+                        <a href="#" class="btn btn-secondary">Cancel</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+           </div>
         </div>
     </div>
     <!--Account Settings Modal -->
